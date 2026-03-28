@@ -210,3 +210,4 @@ C:\Users\pmoso\C#\ProjetoSeleniumMock\obj\Debug\net8.0\ProjetoSeleniumMock.pdb
 C:\Users\pmoso\C#\ProjetoSeleniumMock\obj\Debug\net8.0\ProjetoSeleniumMock.genruntimeconfig.cache
 C:\Users\pmoso\C#\ProjetoSeleniumMock\obj\Debug\net8.0\ref\ProjetoSeleniumMock.dll
 C:\Users\pmoso\C#\ProjetoSeleniumMock\bin\Debug\net8.0\specflow.json
+C:\Users\pmoso\C#\ProjetoSeleniumMock\obj\Debug\net8.0\ProjetoSeleniumMock.sourcelink.json

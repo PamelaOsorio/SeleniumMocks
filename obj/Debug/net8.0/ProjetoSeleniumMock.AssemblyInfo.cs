@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ProjetoSeleniumMock")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+32491f13e37ba50e6b2fce49068df9a5da5a2f54")]
 [assembly: System.Reflection.AssemblyProductAttribute("ProjetoSeleniumMock")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ProjetoSeleniumMock")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

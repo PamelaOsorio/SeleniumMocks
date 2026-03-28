@@ -19,7 +19,7 @@ jobs:
         dotnet-version: 8.0.x
 
     - name: Subir Selenium Grid (Docker)
-      run: docker-compose up -d
+      run: docker compose up -d
 
     - name: Aguardar o Selenium
       run: |
@@ -31,12 +31,15 @@ jobs:
     - name: Executar Testes
       run: dotnet test --configuration Release --logger:"console;verbosity=normal"
 
-    - name: Instalar LivingDoc CLI
+    - name: Instalar SpecFlow LivingDoc Tool
       run: dotnet tool install --global SpecFlow.Plus.LivingDoc.CLI
 
-    - name: Gerar Relatório HTML
+    - name: Gerar Relatório LivingDoc
       run: |
-        livingdoc test-assembly bin/Release/net8.0/ProjetoSeleniumMock.dll -t bin/Release/net8.0/TestExecution.json
+         # Adiciona o caminho das ferramentas globais ao PATH do sistema
+         export PATH="$PATH:$HOME/.dotnet/tools"
+         livingdoc test-assembly bin/Debug/net8.0/ProjetoSeleniumMock.dll -t TestExecution.json
+
       if: always() # Roda mesmo se o test falhar
 
     - name: Upload do Relatório
