@@ -35,9 +35,9 @@ jobs:
       run: dotnet tool install SpecFlow.Plus.LivingDoc.CLI --tool-path ./tools
 
     - name: Gerar LivingDoc
-      if: always() # Garante que o relatório seja gerado mesmo se o teste falhar
+      if: always()
       run: |
-        ./tools/livingdoc test-assembly bin/Debug/net8.0/ProjetoSeleniumMock.dll -t TestExecution.json
+        ./tools/livingdoc test-assembly bin/Debug/net8.0/ProjetoSeleniumMock.dll -t bin/Debug/net8.0/TestExecution.json
 
     - name: Upload do Relatório
       uses: actions/upload-artifact@v4
