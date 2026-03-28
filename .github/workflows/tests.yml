@@ -1,10 +1,10 @@
-name: Testes Selenium Mock
+name: Executar os testes com o GitActions
 
 on:
   push:
-    branches: [ main, master ]
+    branches: [ Master, QA, Homolog]
   pull_request:
-    branches: [ main ]
+    branches: [ Master ]
 
 jobs:
   test:
