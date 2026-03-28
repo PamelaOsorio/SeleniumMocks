@@ -34,11 +34,11 @@ jobs:
     - name: Instalar SpecFlow LivingDoc Tool
       run: dotnet tool install --global SpecFlow.Plus.LivingDoc.CLI
 
-    - name: Gerar Relatório LivingDoc
-      run: |
-         # Adiciona o caminho das ferramentas globais ao PATH do sistema
-         export PATH="$PATH:$HOME/.dotnet/tools"
-         livingdoc test-assembly bin/Debug/net8.0/ProjetoSeleniumMock.dll -t TestExecution.json
+    - name: Rodar Testes
+      run: dotnet test --logger "trx;LogFileName=test_results.trx"
+
+    - name: Gerar LivingDoc
+      run: dotnet livingdoc test-assembly bin/Debug/net8.0/ProjetoSeleniumMock.dll -t bin/Debug/net8.0/TestExecution.json
 
       if: always() # Roda mesmo se o test falhar
 
