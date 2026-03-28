@@ -23,7 +23,7 @@ jobs:
 
     - name: Aguardar o Selenium
       run: |
-           timeout 60s bash -c 'until curl -s http://localhost:4444/wd/hub/status | grep "ready"; do sleep; done'
+           timeout 60s bash -c 'until curl -s http://localhost:4444/wd/hub/status | grep "ready"; do sleep 5; done'
 
     - name: Restaurar Dependências
       run: dotnet restore
