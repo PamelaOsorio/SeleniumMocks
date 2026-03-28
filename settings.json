@@ -1,0 +1,9 @@
+{
+    "cucumber.features": ["Features/**/*.feature"],
+    "cucumber.glue": ["StepDefinitions/**/*.cs", "Hooks/**/*.cs"],
+    "cucumber.parameterTypes": [],
+    "cucumber.language": "pt",
+    "files.associations": {
+        "*.feature": "cucumber"
+    }
+}

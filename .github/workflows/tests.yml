@@ -1,0 +1,47 @@
+name: Testes Selenium Mock
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: 8.0.x
+
+    - name: Subir Selenium Grid (Docker)
+      run: docker-compose up -d
+
+    - name: Aguardar o Selenium
+      run: |
+           timeout 60s bash -c 'until curl -s http://localhost:4444/wd/hub/status | grep "ready"; do sleep; done'
+
+    - name: Restaurar Dependências
+      run: dotnet restore
+
+    - name: Executar Testes
+      run: dotnet test --configuration Release --logger:"console;verbosity=normal"
+
+    - name: Instalar LivingDoc CLI
+      run: dotnet tool install --global SpecFlow.Plus.LivingDoc.CLI
+
+    - name: Gerar Relatório HTML
+      run: |
+        livingdoc test-assembly bin/Release/net8.0/ProjetoSeleniumMock.dll -t bin/Release/net8.0/TestExecution.json
+      if: always() # Roda mesmo se o test falhar
+
+    - name: Upload do Relatório
+      uses: actions/upload-artifact@v4
+      with:
+        name: Relatorio-SpecFlow
+        path: LivingDoc.html
+      if: always()
