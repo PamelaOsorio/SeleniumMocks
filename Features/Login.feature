@@ -7,5 +7,8 @@ Funcionalidade: Login de Usuário
 @meuteste
 Cenário: Login com sucesso usando Mock
     Dado que eu acesso a página de login
-    Quando eu faço login com "teste@email.com" e "senha123"
-    Então o sistema deverá retornar na tela a mensagem "Bem-vindo"
+    Quando preencher o campo de usuário com "admin@gmail.com" 
+    E preencher o campo de senha com "1234567"
+    E clicar no botão de entrar
+    Então o usuário deverá visualizar na tela a mensagem "Bem-vindo, Admin!"
+    E o log do servidor deverá retornar com uma resposta HTTP 200

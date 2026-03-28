@@ -97,10 +97,19 @@ this.ScenarioInitialize(scenarioInfo);
     testRunner.Given("que eu acesso a página de login", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Dado ");
 #line hidden
 #line 10
-    testRunner.When("eu faço login com \"teste@email.com\" e \"senha123\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Quando ");
+    testRunner.When("preencher o campo de usuário com \"admin@gmail.com\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Quando ");
 #line hidden
 #line 11
-    testRunner.Then("o sistema deverá retornar na tela a mensagem \"Bem-vindo\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Então ");
+    testRunner.And("preencher o campo de senha com \"1234567\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
+#line hidden
+#line 12
+    testRunner.And("clicar no botão de entrar", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
+#line hidden
+#line 13
+    testRunner.Then("o usuário deverá visualizar na tela a mensagem \"Bem-vindo, Admin!\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Então ");
+#line hidden
+#line 14
+    testRunner.And("o log do servidor deverá retornar com uma resposta HTTP 200", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
 #line hidden
             }
             this.ScenarioCleanup();

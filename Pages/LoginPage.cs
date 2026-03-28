@@ -16,9 +16,14 @@ namespace ProjetoSeleniumMock.Pages
         private IWebElement WelcomeMessage => _driver.FindElement(By.XPath("//h1[contains(@class, 'welcome')]"));
 
 
-        public void EnterYourCredentials(string user, string password)
+        public void EnterUser(string user)
         {
             EmailField.SendKeys(user);
+            
+        }
+
+        public void EnterPassword(string password)
+        {
             PasswordField.SendKeys(password);
         }
 

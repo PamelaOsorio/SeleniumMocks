@@ -6,6 +6,7 @@ using WireMock.Server; // Usar WireMock para simular a API de Login
 using WireMock.RequestBuilders;
 using WireMock.ResponseBuilders;
 using ProjetoSeleniumMock.Mocks;
+
 namespace ProjetoSeleniumMock.Hooks
 {
 

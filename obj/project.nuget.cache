@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "GgKPaZHgQS0=",
+  "dgSpecHash": "4XbQoy+CWWY=",
   "success": true,
   "projectFilePath": "C:\\Users\\pmoso\\C#\\ProjetoSeleniumMock\\ProjetoSeleniumMock.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\pmoso\\.nuget\\packages\\anyof\\0.3.0\\anyof.0.3.0.nupkg.sha512",
     "C:\\Users\\pmoso\\.nuget\\packages\\bodi\\1.5.0\\bodi.1.5.0.nupkg.sha512",
     "C:\\Users\\pmoso\\.nuget\\packages\\fare\\2.2.0\\fare.2.2.0.nupkg.sha512",
+    "C:\\Users\\pmoso\\.nuget\\packages\\fluentassertions\\8.9.0\\fluentassertions.8.9.0.nupkg.sha512",
     "C:\\Users\\pmoso\\.nuget\\packages\\gherkin\\19.0.3\\gherkin.19.0.3.nupkg.sha512",
     "C:\\Users\\pmoso\\.nuget\\packages\\graphql\\7.5.0\\graphql.7.5.0.nupkg.sha512",
     "C:\\Users\\pmoso\\.nuget\\packages\\graphql-parser\\8.3.0\\graphql-parser.8.3.0.nupkg.sha512",

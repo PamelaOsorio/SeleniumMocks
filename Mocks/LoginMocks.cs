@@ -30,7 +30,7 @@ namespace ProjetoSeleniumMock.Mocks
                 .RespondWith(WireMock.ResponseBuilders.Response.Create()
                      .WithStatusCode(200)
                      .WithHeader("Content-Type", "text/html")
-                     .WithBody("<html><body><h1 class='welcome'>Bem-vindo</h1></body></html>"));
+                     .WithBody("<html><body><h1 class='welcome'>Bem-vindo, Admin!</h1></body></html>"));
 
 
         }
